@@ -17,5 +17,6 @@ int main()
 {
     system("color");
 
+    cout << "\033[2J\033[1;1H";
     MenuBase::MenuHandler(iPage, iSelection);
 }
