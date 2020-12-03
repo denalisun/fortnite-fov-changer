@@ -36,6 +36,23 @@ namespace MenuBase
         cout << "\033[" << y << ";" << x << "H" << toPrint;
     }
 
+    void printSelected(string toPrint, int y, bool isSelected = false)
+    {
+        int cols, rows;
+        GetConsoleSize(cols, rows);
+
+        if (isSelected == true)
+        {
+            int x = floor((cols - toPrint.length()) / 2);
+            cout << "\033[" << y << ";" << x - 2 << "H" << "\033[30;47m" << "  " << toPrint << "  " << "\033[0m";
+        }
+        else
+        {
+            int x = floor((cols - toPrint.length()) / 2);
+            cout << "\033[" << y << ";" << x - 2 << "H" << "  " << toPrint << "  ";
+        }
+    }
+
     void DrawMenu(int iPage, int& iSelection)
     {
         int cols, rows;
@@ -45,9 +62,9 @@ namespace MenuBase
             case 0:
                 printCentered("Fortnite FOV Changer", 1);
                 
-                if (iSelection == 1) { printCentered("[ Preset FOV ]", 4); } else { printCentered("  Preset FOV  ", 4);/*cout << "  Preset FOV" << endl;*/ }
-                if (iSelection == 2) { printCentered("[ Custom FOV ]", 5); } else { printCentered("  Custom FOV  ", 5); }
-                if (iSelection == 3) { printCentered("[ Exit ]", 6); } else { printCentered("  Exit  ", 6); }
+                if (iSelection == 1) { printSelected("Preset FOV", 4, true); } else { printSelected("Preset FOV", 4);/*cout << "  Preset FOV" << endl;*/ }
+                if (iSelection == 2) { printSelected("Custom FOV", 5, true); } else { printSelected("Custom FOV", 5); }
+                if (iSelection == 3) { printSelected("Exit", 6, true); } else { printSelected("Exit", 6); }
 
                 GetConsoleSize(cols, rows);
 
@@ -58,13 +75,13 @@ namespace MenuBase
             case 1:
                 printCentered("Fortnite FOV Changer", 1);
 
-                if (iSelection == 1) { printCentered("[ 80 FOV ]", 4); } else { printCentered("  80 FOV  ", 4); }
-                if (iSelection == 2) { printCentered("[ 90 FOV ]", 5); } else { printCentered("  90 FOV  ", 5); }
-                if (iSelection == 3) { printCentered("[ 100 FOV ]", 6); } else { printCentered("  100 FOV  ", 6); }
-                if (iSelection == 4) { printCentered("[ 110 FOV ]", 7); } else { printCentered("  110 FOV  ", 7); }
-                if (iSelection == 5) { printCentered("[ 120 FOV ]", 8); } else { printCentered("  120 FOV  ", 8); }
-                if (iSelection == 6) { printCentered("[ 135 FOV ]", 9); } else { printCentered("  135 FOV  ", 9); }
-                if (iSelection == 7) { printCentered("[ Exit ]", 11); } else { printCentered("  Exit  ", 11); }
+                if (iSelection == 1) { printSelected("80 FOV", 4, true); } else { printSelected("80 FOV", 4); }
+                if (iSelection == 2) { printSelected("90 FOV", 5, true); } else { printSelected("90 FOV", 5); }
+                if (iSelection == 3) { printSelected("100 FOV", 6, true); } else { printSelected("100 FOV", 6); }
+                if (iSelection == 4) { printSelected("110 FOV", 7, true); } else { printSelected("110 FOV", 7); }
+                if (iSelection == 5) { printSelected("120 FOV", 8, true); } else { printSelected("120 FOV", 8); }
+                if (iSelection == 6) { printSelected("135 FOV", 9, true); } else { printSelected("135 FOV", 9); }
+                if (iSelection == 7) { printSelected("Exit", 11, true); } else { printSelected("Exit", 11); }
 
                 GetConsoleSize(cols, rows);
 
