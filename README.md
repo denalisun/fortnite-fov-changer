@@ -1,6 +1,9 @@
 # Fortnite FOV Changer
 This FOV changer is made in blazingly-fast, raw C++ code.
 
+# Announcement!
+Now, I can't say much about this but.... v2 coming soon... 🤫
+
 # FAQ
 ### How it works
 This works by changing your resolution to adjust horizontal field of view!
@@ -13,6 +16,3 @@ No it cannot, as it only changes your resolution.
 
 ### Does this work on console?
 No, this is PC only.
-
-# Announcement!
-Now, I can't say much about this but.... v2 coming soon... 🤫
