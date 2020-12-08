@@ -14,5 +14,5 @@ All you need to do is open the .exe file, and choose your FOV in the "Preset FOV
 ### Can this get me banned?
 No it cannot, as it only changes your resolution.
 
-### Does this work on console?
+### Does this work on console/mobile?
 No, this is PC only.
