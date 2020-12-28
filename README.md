@@ -1,8 +1,7 @@
+# THIS FOV CHANGER IS NO LONGER SUPPORTED!
+
 # Fortnite FOV Changer
 This FOV changer is made in blazingly-fast, raw C++ code.
-
-# Announcement!
-This FOV Changer is no longer supported.
 
 # FAQ
 ### How does it work?
