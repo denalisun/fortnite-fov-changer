@@ -2,7 +2,7 @@
 This FOV changer is made in blazingly-fast, raw C++ code.
 
 # Announcement!
-Now, I can't say much about this but.... v2 coming soon... 🤫
+This FOV Changer is no longer supported.
 
 # FAQ
 ### How does it work?
